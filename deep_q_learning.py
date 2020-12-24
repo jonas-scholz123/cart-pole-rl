@@ -3,13 +3,12 @@ import numpy as np
 import math
 from collections import deque
 
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Flatten
-from keras.optimizers import Adam
-from keras.losses import MeanSquaredError
-from keras import backend
-
 import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Flatten
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.losses import MeanSquaredError
+from tensorflow.keras import backend
 
 import random
 
@@ -151,7 +150,7 @@ class CartPole():
             self.learning_rate = self.get_learning_rate(episode_nr)
             reward, termination_time = self.run_single_episode()
             self.episode_rewards.append(termination_time)
-            print(termination_time)
+            #print(termination_time)
             #training completed
             if np.average(self.episode_rewards[-self.test_sample:]) > self.test_sample_min_avg:
                 break
