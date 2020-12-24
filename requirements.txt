@@ -1,3 +1,4 @@
 keras-rl2
 tensorflow
 gym
+matplotlib
