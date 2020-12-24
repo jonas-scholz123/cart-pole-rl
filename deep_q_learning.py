@@ -139,6 +139,7 @@ class CartPole():
                 return reward, t+1
 
     def run_n_episodes(self, n):
+        print("beginning training... this might take a while.")
         for episode_nr in range(n):
 
             if episode_nr % self.target_update_interval == 0:
