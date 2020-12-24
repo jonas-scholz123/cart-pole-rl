@@ -66,6 +66,7 @@ class CartPole():
                 return reward, t+1
 
     def run_n_episodes(self, n):
+        print("Beginning training... This might take a while.")
         for episode_nr in range(n):
             #get current learning rate, epsilon
             self.epsilon = self.get_epsilon(episode_nr)
@@ -77,8 +78,6 @@ class CartPole():
             #training completed
             if np.average(self.episode_rewards[-self.test_sample:]) > self.test_sample_min_avg:
                 break
-
-        print("FINISHED TRAINING")
 
         #showcase a small number of rendered simulations
         for showcase_nr in range(5):
