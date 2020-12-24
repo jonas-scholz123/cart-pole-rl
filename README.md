@@ -16,3 +16,6 @@ once all requirements are installed run
  `python3 deep_q_learning.py` for the deep q-learning version
 
  `python3 discrete_q_learning.py` for the discretised q-learning version
+
+*Because training is an inherently statistical process, results may vary and you
+may need to re-run the simulations a couple of times before you get optimal results.*
